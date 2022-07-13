@@ -34,8 +34,40 @@
   <input type="submit" value="CADASTRAR">
 
 
-
 </form:form>
+
+<c:if test="${addSucesso}">
+
+  <table>
+
+    <thead>
+
+    <tr>
+      <th>ID</th>
+      <th>NOME</th>
+      <th> AUTOR </th>
+    </tr>
+
+    </thead>
+    <tbody>
+
+    <c:forEach items="${livros}" var="livro">
+
+      <tr>
+        <td>${livro.id}</td>
+        <td>${livro.nome}</td>
+        <td>${livro.autor}</td>
+
+      </tr>
+
+
+    </c:forEach>
+
+    </tbody>
+
+  </table>
+
+</c:if>
 
 
 </body>

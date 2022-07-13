@@ -37,8 +37,9 @@ public class LivroController {
         RedirectView redirect = new RedirectView("/livro/adicionar", true);
         new LivroService().addLivro(livro);
 
-        attributes.addAttribute("addSucesso",true);
-        attributes.addAttribute("livroSalvo", livro);
+        attributes.addFlashAttribute("addSucesso",true);
+        attributes.addFlashAttribute("livroSalvo", livro);
+        attributes.addFlashAttribute("livros", new LivroService().getlivro());
 
         return redirect;
 

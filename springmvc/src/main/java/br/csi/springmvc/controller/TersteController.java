@@ -11,4 +11,6 @@ public class TersteController {
     public void teste(){
         System.out.println("..... teste spring mvc");
     }
+
+
 }
